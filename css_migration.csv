@@ -1,0 +1,36 @@
+rich-messages-error ;rf-msgs-err 
+rich-menu-item-icon ;rf-ddm-itm-ic 
+rich-menu-item-label ;rf-ddm-itm-lbl 
+rich-messages-fatal ;rf-msgs-ftl 
+rich-messages-info ;rf-msgs-inf 
+rich-message-info ;rf-msg-inf 
+rich-message ;rf-msg
+rich-messages ;rf-msgs 
+rich-table-subheadercell ;rf-dt-shdr-c 
+rich-table-subheader ;rf-dt-shdr 
+rich-table-header ;rf-dt-hdr 
+rich-table-thead ;rf-dt-thd 
+rich-table-row ;rf-dt-r 
+rich-table-firstrow ;rf-dt-fst-r 
+rich-table-cell.inplace ;rf-dt-c.inplace 
+rich-table-cell;rf-dt-c
+rich-table ;rf-dt
+rich-mpnl-header ;rf-pp-hdr 
+rich-mpnl-content ;rf-pp-cnt 
+rich-mpnl-button ;rf-pp-btn 
+rich-mpnl-shadow ;rf-pp-shade 
+rich-panel-body ;rf-p-b
+rich-panel-header ;rf-p-hdr 
+rich-panel;rf-p
+rich-tab-header;rf-tab-hdr
+rich-tabhdr-side-border;rich-tabhdr-side-border 
+rich-tabhdr-side-cell;
+rich-tab-active;
+rich-tab-disabled;
+rich-tabpanel-content;rf-tab-cnt
+rich-home-tabpanel-content;
+rich-tabpanel;rf-tbp
+rich-toolbar;rf-tb
+rich-toolbar-item;rf-tb-itm
+rich-menu-item;
+rich-list-item;
