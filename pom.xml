@@ -9,7 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
-
+    <properties>
+        <jboss-seam.version>2.3.2-SNAPSHOT</jboss-seam.version>
+        <richfaces.version>4.3.7.Final</richfaces.version>
+    </properties>
 
     <build>
         <plugins>
@@ -63,5 +66,17 @@
             <version>2.4</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-api</artifactId>
+            <version>${richfaces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
+            <version>${richfaces.version}</version>
+        </dependency>
     </dependencies>
 </project>

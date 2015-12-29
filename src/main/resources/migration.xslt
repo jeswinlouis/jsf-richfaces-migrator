@@ -3,7 +3,7 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:f="http://java.sun.com/jsf/core" xmlns:rich="http://richfaces.org/rich"
-                xmlns:a4j="http://richfaces.org/a4j" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:a4j="http://richfaces.org/a4j" xmlns:a="http://richfaces.org/a4j"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:s="http://jboss.org/schema/seam/taglib">
 
     <xsl:output
@@ -13,6 +13,7 @@
             doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
             indent="no"
             omit-xml-declaration="yes"
+
     />
 
 
@@ -68,7 +69,6 @@
     <xsl:template match="h:graphicImage" name="h:graphicImage">
         <h:graphicImage>
             <xsl:apply-templates select="@*[name()!='value']" />
-            <xsl:attribute name="library">default</xsl:attribute>
             <xsl:attribute name="name">
                 <xsl:value-of select="replace(./@value, '/(images/.*)\.([pngif]{3})', '$1.$2')" />
             </xsl:attribute>
@@ -92,9 +92,8 @@
     </xsl:template>
 
     <xsl:template match="a4j:loadScript" name="a4j:loadScript">
-        <h:outputScript library="default">
+        <h:outputScript>
             <xsl:apply-templates select="@*[name()!='src']" />
-            <xsl:attribute name="library">default</xsl:attribute>
             <xsl:attribute name="name"><xsl:value-of select="replace(./@src, '/js/(.*\.js)', 'js/$1')" /></xsl:attribute>
         </h:outputScript>
     </xsl:template>
@@ -102,7 +101,6 @@
     <xsl:template match="a4j:loadStyle" name="a4j:loadStyle">
         <h:outputStylesheet >
             <xsl:apply-templates select="@*[name()!='src']" />
-            <xsl:attribute name="library">default</xsl:attribute>
             <xsl:attribute name="name"><xsl:value-of select="replace(./@src, '/css/(.*\.css)', 'css/$1')"></xsl:value-of></xsl:attribute>
         </h:outputStylesheet>
     </xsl:template>

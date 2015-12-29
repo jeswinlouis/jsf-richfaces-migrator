@@ -19,15 +19,17 @@ import javax.xml.transform.stream.StreamSource;
 
 public class Main {
 
-    public static final boolean ONLY_NOT_MIGRATED = false;
+    public static final boolean ONLY_NOT_MIGRATED = true;
     public static final boolean RECURSIVE = true;
     //    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\migration test\\webapp";
+//    private static String WEB_CONTENT_PATH =  "D:\\DEV\\omegapsir\\experimental\\framework-parent\\framework-resources\\src\\main\\resources\\webapp\\WEB-INF\\taglib";
+
 //    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\framework-parent\\framework-resources\\src\\main\\resources\\webapp\\layout";
-    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\itm-parent\\itm-war\\src\\main\\webapp\\customized";
-//    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\migration test\\test";
+//    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\itm-parent\\itm-war\\src\\main\\webapp";
+    private static String WEB_CONTENT_PATH = "D:\\DEV\\omegapsir\\experimental\\migration test\\test";
 
     public static Map<String, String> stringsToReplace = new HashMap<>();
-    public static Set<String> ignoredDirNames = new HashSet<>(Arrays.asList("sorttemplates"));
+    public static Set<String> ignoredDirNames = new HashSet<>(Arrays.asList("sorttemplates", "generated", "resources", "WEB-INF", "reports"));
 
     static {
         stringsToReplace.put("http://jboss.com/products/seam/taglib", "http://jboss.org/schema/seam/taglib");
@@ -110,11 +112,11 @@ public class Main {
 
 
             Source source = new StreamSource(new StringReader(text));
-            System.out.println("Debut transformation XSLT");
+            System.out.println("Start transformation XSLT: "+file.getAbsolutePath());
             StreamResult result = new StreamResult(file);
 //                    Document doc = db.parse(new FileInputStream(oldName));
             transformer.transform(source, result);
-            System.out.println("Fin transformation");
+            System.out.println("transformed file: "+file.getAbsolutePath());
         }
     }
 
