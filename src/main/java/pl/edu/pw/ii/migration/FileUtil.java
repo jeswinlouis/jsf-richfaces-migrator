@@ -5,9 +5,6 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by mwasi_000 on 26.12.2015.
- */
 public class FileUtil {
 
 

@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <properties>
         <jboss-seam.version>2.3.2-SNAPSHOT</jboss-seam.version>
-        <richfaces.version>4.3.7.Final</richfaces.version>
+        <richfaces.version>4.5.16.Final</richfaces.version>
     </properties>
 
     <build>
@@ -68,15 +68,24 @@
 
 
         <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-api</artifactId>
-            <version>${richfaces.version}</version>
+            <groupId>org.richfaces</groupId>
+            <artifactId>richfaces</artifactId>
+            <version>4.5.16.Final</version>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>1.3.0</version>
         </dependency>
 
         <dependency>
-            <groupId>org.richfaces.core</groupId>
-            <artifactId>richfaces-core-impl</artifactId>
-            <version>${richfaces.version}</version>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.48</version>
         </dependency>
+
     </dependencies>
 </project>
